@@ -1,0 +1,114 @@
+@use '../../styles/tokens.scss' as *;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $color-white-transparent;
+  box-shadow: $shadow-sm;
+  z-index: $z-index-header;
+  padding: $spacing-sm 0;
+  
+  @media (max-width: $breakpoint-sm) {
+    padding: $spacing-xs 0;
+  }
+}
+
+.nav {
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding: 0 $container-padding;
+  display: flex;
+  justify-content: center;
+  gap: $spacing-lg;
+  flex-wrap: wrap;
+
+  @media (max-width: $breakpoint-md) {
+    gap: $spacing-sm;
+    padding: 0 $spacing-sm;
+  }
+  
+  @media (max-width: $breakpoint-sm) {
+    gap: $spacing-xs;
+    padding: 0 $spacing-xs;
+    flex-direction: column;
+    align-items: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    padding: $spacing-sm 0;
+    opacity: 0;
+    visibility: hidden;
+    
+    &.open {
+      max-height: 300px;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  button {
+    background: none;
+    border: none;
+    padding: $spacing-xs $spacing-sm;
+    font-size: $font-size-sm;
+    color: $color-text-primary;
+    cursor: pointer;
+    position: relative;
+    transition: color $transition-fast;
+    white-space: nowrap;
+
+    @media (max-width: $breakpoint-sm) {
+      width: 100%;
+      text-align: center;
+      padding: $spacing-xs 0;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #db8441;
+      transition: width $transition-fast;
+    }
+
+    &:hover {
+      color: #db8441;
+
+      &::after {
+        width: 100%;
+      }
+    }
+
+    &.active {
+      color: #db8441;
+      font-weight: $font-weight-medium;
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.menuToggle {
+  display: none;
+  background: none;
+  border: none;
+  color: $color-text-primary;
+  font-size: $font-size-lg;
+  cursor: pointer;
+  padding: $spacing-xs;
+  position: absolute;
+  right: $spacing-sm;
+  top: 50%;
+  transform: translateY(-50%);
+  
+  @media (max-width: $breakpoint-sm) {
+    display: block;
+  }
+} 

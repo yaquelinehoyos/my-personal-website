@@ -1,0 +1,197 @@
+@use '../../styles/tokens.scss' as *;
+
+.contact {
+  min-height: 100vh;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  background-color: $color-background;
+  display: flex;
+  align-items: center;
+  scroll-margin-top: $header-height;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $color-background;
+    z-index: 0;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    max-width: $container-max-width;
+    margin: 0 auto;
+    padding: $container-padding;
+    width: 100%;
+
+    @media (max-width: $breakpoint-md) {
+      padding: $spacing-sm;
+    }
+  }
+
+  .title {
+    font-size: $font-size-xxl;
+    color: $color-text-primary;
+    margin-bottom: $spacing-lg;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .content {
+    background-color: $color-white;
+    padding: $spacing-xl;
+    border-radius: $border-radius-lg;
+    box-shadow: $shadow-lg;
+    transform: translateY(0);
+    transition: transform $transition-fast;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    gap: $spacing-xl;
+
+    @media (max-width: $breakpoint-md) {
+      flex-direction: column;
+      gap: $spacing-lg;
+    }
+
+    &:hover {
+      transform: translateY(-10px);
+    }
+  }
+
+  .info {
+    flex: 1;
+    h3 {
+      font-size: 1.8rem;
+      color: #333;
+      margin-bottom: 1rem;
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 100px;
+        height: 4px;
+        background-color: #db8441;
+        border-radius: 2px;
+      }
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #666;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .contactMethods {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .contactItem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .label {
+    font-weight: $font-weight-bold;
+    color: $color-text-primary;
+    min-width: 80px;
+  }
+
+  .link {
+    color: #db8441;
+    text-decoration: none;
+    transition: color $transition-fast;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .location {
+    color: $color-text-secondary;
+  }
+
+  .mapSection {
+    flex: 1;
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+
+    h3 {
+      font-size: $font-size-lg;
+      color: $color-text-primary;
+      margin-bottom: $spacing-md;
+    }
+  }
+
+  .mapContainer {
+    width: 100%;
+    border-radius: $border-radius-md;
+    overflow: hidden;
+    box-shadow: $shadow-md;
+    transition: transform $transition-fast;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+
+  .contactInfo {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+  }
+
+  .infoItem {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .value {
+    font-size: 1.2rem;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #007bff;
+    }
+  }
+
+  .socialLinks {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .socialLink {
+    padding: 0.8rem 1.5rem;
+    background-color: #007bff;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    &:hover {
+      background-color: #0056b3;
+      transform: translateY(-2px);
+    }
+  }
+} 

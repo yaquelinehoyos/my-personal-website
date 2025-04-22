@@ -1,0 +1,187 @@
+@use '../../styles/tokens.scss' as *;
+
+.experience {
+  min-height: 100vh;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  background-color: $color-background;
+  display: flex;
+  align-items: center;
+  scroll-margin-top: $header-height;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $color-background;
+    z-index: 0;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    max-width: $container-max-width;
+    margin: 0 auto;
+    padding: $container-padding;
+    width: 100%;
+    padding-top: $header-height;
+
+    @media (max-width: $breakpoint-md) {
+      padding: $spacing-sm;
+      padding-top: $header-height;
+    }
+  }
+
+  .title {
+    font-size: $font-size-xxl;
+    color: $color-text-primary;
+    margin-bottom: $spacing-lg;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .timeline {
+    position: relative;
+    padding: $spacing-lg 0;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+      height: 100%;
+      background-color: $color-primary;
+      
+      @media (max-width: $breakpoint-md) {
+        left: 20px;
+        transform: none;
+      }
+    }
+  }
+
+  .timelineItem {
+    margin-bottom: $spacing-xl;
+    position: relative;
+    width: 50%;
+    padding-right: $spacing-lg;
+    box-sizing: border-box;
+
+    @media (max-width: $breakpoint-md) {
+      width: 100%;
+      padding-right: 0;
+      padding-left: 40px;
+    }
+
+    &:nth-child(even) {
+      margin-left: auto;
+      padding-right: 0;
+      padding-left: $spacing-lg;
+      
+      @media (max-width: $breakpoint-md) {
+        margin-left: 0;
+        padding-left: 40px;
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -6px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: $color-primary;
+      z-index: 1;
+      
+      @media (max-width: $breakpoint-md) {
+        right: auto;
+        left: 12px;
+      }
+    }
+
+    &:nth-child(even)::before {
+      right: auto;
+      left: -6px;
+      
+      @media (max-width: $breakpoint-md) {
+        left: 12px;
+      }
+    }
+  }
+
+  .timelineContent {
+    background-color: $color-white;
+    padding: $spacing-md;
+    border-radius: $border-radius-lg;
+    box-shadow: $shadow-lg;
+    transform: translateY(0);
+    transition: transform $transition-fast;
+
+    &:hover {
+      transform: translateY(-10px);
+    }
+  }
+
+  .company {
+    font-size: $font-size-lg;
+    color: $color-text-primary;
+    margin-bottom: $spacing-xs;
+    position: relative;
+    display: inline-block;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background-color: #db8441;
+      border-radius: 2px;
+    }
+  }
+
+  .position {
+    font-size: $font-size-md;
+    color: $color-text-secondary;
+    margin-bottom: $spacing-sm;
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xs;
+    margin-bottom: $spacing-sm;
+    color: $color-text-tertiary;
+    font-size: $font-size-sm;
+
+    .period {
+      font-weight: $font-weight-medium;
+    }
+
+    .location {
+      color: $color-text-secondary;
+    }
+  }
+
+  .description {
+    list-style-type: disc;
+    padding-left: $spacing-sm;
+    color: $color-text-primary;
+
+    li {
+      margin-bottom: $spacing-xs;
+      line-height: $line-height-normal;
+    }
+  }
+} 
