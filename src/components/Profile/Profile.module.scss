@@ -39,6 +39,10 @@
     color: $color-text-primary;
     margin-bottom: $spacing-lg;
     z-index: 1;
+
+    @media (max-width: $breakpoint-lg) {
+      margin-top: $spacing-lg + $spacing-xxl;
+    }
   }
 
   .greeting {
@@ -57,10 +61,6 @@
     
     @media (max-width: $breakpoint-md) {
       font-size: $font-size-lg;
-    }
-
-    @media (max-width: $breakpoint-lg) {
-      margin-top: $spacing-lg;
     }
   }
   

@@ -47,16 +47,15 @@
 
   .content {
     background-color: $color-white;
-    padding: $spacing-xl;
+    padding: $spacing-lg;
     border-radius: $border-radius-lg;
     box-shadow: $shadow-lg;
     transform: translateY(0);
     transition: transform $transition-fast;
-    max-width: 1200px;
-    margin: 0 auto;
     display: flex;
     flex-direction: row;
     gap: $spacing-xl;
+    z-index: 1;
 
     @media (max-width: $breakpoint-md) {
       flex-direction: column;
