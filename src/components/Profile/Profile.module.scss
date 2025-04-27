@@ -3,9 +3,9 @@
 
 .profile {
   min-height: 100vh;
-  padding: 0 15%;
   position: relative;
   overflow: hidden;
+  padding: 2rem;
   background-color: $color-background;
   display: flex;
   flex-direction: column;
@@ -14,7 +14,7 @@
   scroll-margin-top: $header-height;
 
   @media (max-width: $breakpoint-md) {
-    padding: 0 5%;
+    padding: 1rem;
   }
 
   &::before {
@@ -38,6 +38,7 @@
     justify-content: center;
     color: $color-text-primary;
     margin-bottom: $spacing-lg;
+    z-index: 1;
   }
 
   .greeting {
@@ -67,50 +68,16 @@
     position: relative;
     z-index: 1;
     max-width: $container-max-width;
-    margin: 0 auto;
     display: grid;
-    grid-template-columns: 65% 35%;
+    grid-template-columns: 1fr;
     gap: $spacing-xxl;
     align-items: stretch;
     justify-content: space-between;
     width: 100%;
 
     @media (max-width: $breakpoint-lg) {
-      grid-template-columns: 1fr;
       gap: $spacing-lg;
       padding: $spacing-sm;
-    }
-  }
-
-  .photoContainer {
-    position: relative;
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-    border-radius: $border-radius-lg;
-    overflow: hidden;
-    transform: translateY(0);
-    transition: transform $transition-fast;
-    height: 100%;
-    box-shadow: $shadow-lg;
-
-    @media (max-width: $breakpoint-lg) {
-      max-width: 100%;
-      width: 100%;
-      height: auto;
-      aspect-ratio: 3/4;
-    }
-
-    &:hover {
-      transform: translateY(-10px);
-    }
-
-    .photo {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform $transition-fast;
     }
   }
 
@@ -121,7 +88,6 @@
     box-shadow: $shadow-lg;
     transform: translateY(0);
     transition: transform $transition-fast;
-    width: 100%;
     color: $color-text-secondary;
 
     @media (max-width: $breakpoint-md) {
@@ -130,6 +96,22 @@
 
     &:hover {
       transform: translateY(-10px);
+    }
+
+    .contentWrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: $spacing-xxl;
+
+      @media (max-width: $breakpoint-md) {
+        flex-direction: column-reverse;
+        gap: $spacing-md;
+      }
+    }
+
+    .textContent {
+      flex: 1;
     }
 
     p {
@@ -200,6 +182,38 @@
       @media (max-width: $breakpoint-md) {
         font-size: $font-size-sm;
         line-height: 1.5;
+      }
+    }
+
+    .photoContainer {
+      position: relative;
+      width: 100%;
+      max-width: 250px;
+      margin: 0;
+      border-radius: $border-radius-lg;
+      overflow: hidden;
+      transform: translateY(0);
+      transition: transform $transition-fast;
+      height: auto;
+      aspect-ratio: 3/4;
+      box-shadow: $shadow-lg;
+      flex-shrink: 0;
+
+      @media (max-width: $breakpoint-md) {
+        max-width: 200px;
+        margin: 0 auto;
+      }
+
+      &:hover {
+        transform: translateY(-10px);
+      }
+
+      .photo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform $transition-fast;
       }
     }
 
