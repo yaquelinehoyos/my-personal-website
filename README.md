@@ -2,9 +2,9 @@
 
 A modern, responsive personal portfolio website built with React, TypeScript, and Vite. Features smooth animations, clean design, and a cherry blossom theme.
 
-## 🎥 Preview
+## 🌐 Live Website
 
-[Watch Portfolio Preview Video](assets/my-webpage-preview.mov)
+Visit my webpage at [yaquelinehoyos.com](https://yaquelinehoyos.com)
 
 ## ✨ Features
 
