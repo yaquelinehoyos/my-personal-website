@@ -1,4 +1,5 @@
 @use '../../styles/tokens.scss' as *;
+@use "sass:color";
 
 .profile {
   min-height: 100vh;
@@ -207,7 +208,7 @@
       align-items: center;
       justify-content: center;
       padding: $spacing-md $spacing-xl;
-      margin-top: $spacing-xl;
+      margin-top: $spacing-sm;
       background-color: $color-primary;
       color: $color-white;
       border: none;
@@ -241,7 +242,7 @@
       &:hover {
         transform: translateY(-2px);
         box-shadow: $shadow-lg;
-        background-color: darken($color-primary, 5%);
+        background-color: color.scale($color-primary, $lightness: -5%);
 
         &::before {
           left: 100%;

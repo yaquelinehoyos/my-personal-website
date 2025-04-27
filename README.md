@@ -1,3 +1,123 @@
+# Personal Portfolio Website 🌸
+
+A modern, responsive personal portfolio website built with React, TypeScript, and Vite. Features smooth animations, clean design, and a cherry blossom theme.
+
+## 🎥 Preview
+
+https://github.com/yaquelinehoyos/my-webpage/assets/my-webpage-preview
+
+## ✨ Features
+
+- 🎨 Modern and responsive design
+- ⚡ Built with React + TypeScript + Vite
+- 🎭 Smooth scroll animations
+- 🎯 Intersection Observer for scroll animations
+- 🎨 SASS/SCSS for styling
+- 🔄 Redux for state management
+
+## 🚀 Sections
+
+- Profile
+- About Me
+- Professional Experience
+- Education
+- Skills & Certifications
+- Contact Information
+
+## 🛠️ Tech Stack
+
+- React
+- TypeScript
+- Vite
+- Redux Toolkit
+- SASS/SCSS
+- Framer Motion
+- ESLint
+- Prettier
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v14 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
+```bash
+git clone https://github.com/yaquelinehoyos/my-webpage.git
+```
+
+2. Install dependencies
+```bash
+cd my-webpage
+npm install
+```
+
+3. Start the development server
+```bash
+npm run dev
+```
+
+4. Build for production
+```bash
+npm run build
+```
+
+## 📝 Project Structure
+
+```
+my-webpage/
+├── src/
+│   ├── components/     # React components
+│   ├── store/         # Redux store and slices
+│   ├── styles/        # Global styles and variables
+│   ├── App.tsx        # Main App component
+│   └── main.tsx       # Entry point
+├── public/            # Static assets
+└── index.html         # HTML template
+```
+
+## 🎨 Customization
+
+The website content can be easily customized by modifying the data in `src/store/slices/resumeSlice.ts`. This includes:
+
+- Personal information
+- Work experience
+- Education
+- Skills and certifications
+- Contact details
+
+## 📱 Responsive Design
+
+The website is fully responsive and optimized for:
+- Mobile devices
+- Tablets
+- Desktop screens
+
+## 🔧 Development
+
+### Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run lint` - Run ESLint
+- `npm run preview` - Preview production build
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 👩‍💻 Author
+
+**Yaqueline Hoyos**
+- Website: [yaquelinehoyos.com](https://yaquelinehoyos.com)
+- LinkedIn: [yaquelinehoyos](https://linkedin.com/in/yaquelinehoyos/)
+- Email: yaqueline150@gmail.com
+
+---
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
