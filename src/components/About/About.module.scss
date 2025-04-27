@@ -2,13 +2,14 @@
 
 .about {
   min-height: 100vh;
-  padding: 2rem;
+  padding: $container-padding;
   position: relative;
   overflow: hidden;
   background-color: $color-background;
+  width: 100%;
   display: flex;
   align-items: center;
-
+  justify-content: center;
   &::before {
     content: '';
     position: absolute;
@@ -24,8 +25,6 @@
     position: relative;
     z-index: 1;
     max-width: $container-max-width;
-    margin: 0 auto;
-    padding: $container-padding;
     width: 100%;
 
     @media (max-width: $breakpoint-md) {

@@ -2,12 +2,13 @@
 
 .contact {
   min-height: 100vh;
-  padding: 2rem;
+  padding: $container-padding;
   position: relative;
   overflow: hidden;
   background-color: $color-background;
   display: flex;
   align-items: center;
+  justify-content: center;
   scroll-margin-top: $header-height;
 
   &::before {
@@ -25,8 +26,6 @@
     position: relative;
     z-index: 1;
     max-width: $container-max-width;
-    margin: 0 auto;
-    padding: $container-padding;
     width: 100%;
 
     @media (max-width: $breakpoint-md) {
