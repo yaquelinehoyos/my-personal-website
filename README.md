@@ -4,10 +4,7 @@ A modern, responsive personal portfolio website built with React, TypeScript, an
 
 ## 🎥 Preview
 
-<video width="100%" controls>
-  <source src="assets/my-webpage-preview.mov" type="video/quicktime">
-  Your browser does not support the video tag.
-</video>
+[Watch Portfolio Preview Video](assets/my-webpage-preview.mov)
 
 ## ✨ Features
 
